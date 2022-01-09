@@ -206,7 +206,7 @@
   }
   
   .section3 img{
-    width: 100%;
+    width: 90%;
     height: auto;
   }
   .sect4 a {
@@ -470,6 +470,18 @@
     .section3 {
       padding: 80px 20px 40px;
 
+    }
+    .section3-grid-container {
+      grid-template-columns: 1fr;
+    }
+    .section4 {
+      padding: 0;
+    }
+    .section4-innerdiv {
+      width: 100%;
+      border-radius: 0;
+      color: var(--text-blue);
+      background-color: white;
     }
     footer {
       padding: 48px 20px 38px;
