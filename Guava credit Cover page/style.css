@@ -30,6 +30,48 @@
     line-height: 98.35px;
   }
 
+  /* toggle */
+  .toggle-container {
+    display: none;
+  }
+  .toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--button-background-dark-purple) url(./images/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    z-index: 20;
+    cursor: pointer;
+  }
+  .toggle.active {
+    background: var(--button-background-dark-purple) url(./images/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+  }
+  .navigation {
+    list-style: none;
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .navigation.active {
+    left: 0;
+  }
+
   /* header */
   .header{
     background-image: url(./images/landing\ page.png);
@@ -49,6 +91,7 @@
     font-weight: 700;
     line-height: 60.24px;
     font-size: 48px;
+    z-index: 20;
   }
   .logo sup {
     font-size: 14px;
@@ -62,6 +105,7 @@
    header li {
       display: inline-block;
       padding-right: 24px;
+      
    }
 
   .dropdown1 {
@@ -83,12 +127,16 @@
   .signup-button {
     width: 98px;
     height: 49px;
-    padding: 12px;
+    padding: 10px;
     background-color: var(--button-background-dark-purple);
     border-radius: 5px;
   }
+  .signup-button:hover {
+    color: var(--button-background-dark-purple);
+    background-color: white;
+    border: 1px solid var(--button-background-dark-purple);
+  }
   .header div {
-    margin: 15px 0 0 54px;
     margin-top: 15px;
   }
   .header div p {
@@ -153,6 +201,11 @@
     grid-column-gap: 100px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     margin: 100px 0 50px;
+
+  }
+  .section3-grid-container:nth-child(even) {
+    grid-auto-flow: column;
+    display: grid;
   }
   
   .section3 img{
@@ -275,6 +328,7 @@
     margin-top: 120px;
   }
   .copyright{
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -313,6 +367,69 @@
 
 
   @media (max-width: 850px){
+    header {
+      padding: 64px 10%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .header nav {
+      display: none;
+    }
+
+    .toggle-container {
+      display: contents;
+    }
+
+    .navigation {
+      list-style: none;
+      position: fixed;
+      top:0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: 9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .navigation.active {
+      left: 0;
+    }
+    .signup-button {
+      width: 190px;
+      display: inline-block;
+      text-align: center;
+      
+    }
+    .navigation li {
+      margin-bottom: 50px;
+      font-size: 20px;
+    }
+   
+    .navigation-special {
+      color: var(--button-background-dark-purple);
+      padding: 10px;
+      width: 190px;
+      text-align: center;
+      display: inline-block;
+    }
+    .navigation-special:hover {
+      color: white;
+      background-color: var(--button-background-dark-purple);
+      border-radius: 5px;
+
+    }
+
+
+
+    .section3 {
+      padding: 80px 50px 40px;
+
+    }
     .section3 p {
       font-size: 18px;
       line-height: 33px;
@@ -321,5 +438,52 @@
     {
       padding-top: 25px;
       font-size: 42px;
+    }
+    .section4-innerdiv-img {
+      display: none;
+    }
+    .section4-arrow-svg {
+      display: none;
+    }
+    .section4-innerdiv {
+      margin: 0;
+    }
+    .section4 h4 {
+      font-size: 40px;
+    }
+    .section4-box {
+      display: none;
+    }
+    .section4 p {
+      width: 100%;
+      font-size: 25px;
+      line-height: 44px;
+    }
+
+    footer {
+      padding: 48px 80px 38px;
+    }
+    
+  }
+
+
+
+  @media (max-width: 480px) {
+
+    .section3 {
+      padding: 80px 20px 40px;
+
+    }
+    footer {
+      padding: 48px 20px 38px;
+
+    }
+    footer .grid-container {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
   }
