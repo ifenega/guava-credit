@@ -46,6 +46,7 @@
     background-position: center;
     z-index: 20;
     cursor: pointer;
+
   }
   .toggle.active {
     background: var(--button-background-dark-purple) url(./images/close.png);
