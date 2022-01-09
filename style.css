@@ -204,10 +204,6 @@
     margin: 100px 0 50px;
 
   }
-  .section3-grid-container:nth-child(even) {
-    grid-auto-flow: column;
-    display: grid;
-  }
   
   .section3 img{
     width: 100%;
