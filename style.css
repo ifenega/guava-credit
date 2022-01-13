@@ -287,14 +287,21 @@
 
   }
   .section4-box{
-
     position: relative;
     background-color: hsla(0, 0%, 100%, 1);
     width: 214.25px;
     height: 58px;
     border-radius: 5px;
-
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-blue);
+    font-size: 20px;
+  }
+  .section4-box:hover {
+    color: white;
+    background-color: var(--text-blue);
   }
   .section4-arrow-svg {
     position: absolute;
@@ -479,7 +486,7 @@
     .section3 h5 
     {
       padding-top: 25px;
-      font-size: 42px;
+      font-size: 30px;
     }
     .section4 {
       padding: 10px;
@@ -508,10 +515,6 @@
     
   }
 
-
-
-
-
   @media (max-width: 480px) {
 
     .section3 {
@@ -529,6 +532,7 @@
       border-radius: 0;
       color: var(--text-blue);
       background-color: white;
+
     }
     footer {
       padding: 48px 20px 38px;
