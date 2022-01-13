@@ -40,7 +40,7 @@
     right: 0;
     width: 60px;
     height: 60px;
-    background: var(--button-background-dark-purple) url(./images/menu.png);
+    background:  url(./images/menu.png);
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: center;
