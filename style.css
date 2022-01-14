@@ -204,6 +204,10 @@
     margin: 100px 0 50px;
 
   }
+  .section3-grid-container:nth-child(even) div {
+    grid-row: 1/2;
+  }
+  
   
   .section3 img{
     width: 90%;
@@ -375,6 +379,11 @@
     padding-bottom: 8px;
   }
   
+  @media (max-width: 999px) {
+    .section3-grid-container:nth-child(even) div {
+      grid-row: 2/3;
+    }
+  }
 
   @media (max-width: 1161px) {
     /* section4 */
