@@ -198,6 +198,7 @@
     font-weight: 500;
   }
 
+
   .section3-grid-container{
     display: grid;
     align-items: center;
@@ -382,8 +383,14 @@
   }
   
   @media (max-width: 999px) {
+    .section3-grid-container {
+      justify-items: center;
+    }
     .section3-grid-container:nth-child(even) div {
       grid-row: 2/3;
+    }
+    .section3-container {
+      text-align: justify;
     }
   }
 
