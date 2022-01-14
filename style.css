@@ -386,7 +386,7 @@
     .section3-grid-container {
       justify-items: center;
     }
-    .section3-grid-container h5 {
+    .section3 h5 {
       text-align: center;
     }
     .section3-grid-container:nth-child(even) div {
