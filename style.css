@@ -219,6 +219,16 @@
 }
 
 
+.carousel-item {
+  background-color: var(--button-background-dark-purple);
+
+  padding: 2rem;
+}
+
+.text-container {
+    display: flex;
+  justify-content: center;
+}
 
 
 
@@ -453,6 +463,13 @@
 
   @media (max-width: 1161px) {
     /* section4 */
+
+    .text-container {
+      font-size: 1.5rem;
+    }
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+      height: 1.5rem;
+    }
     .section4-innerdiv {
       background-color: white;
     }
@@ -592,6 +609,9 @@
   }
 
   @media (max-width: 480px) {
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+      height: 1.3rem;
+    }
     .button-box {
       display: flex;
       flex-direction: column;
@@ -604,7 +624,7 @@
       width: 100%;
       
     }
-    #text-container {
+    .text-container {
       font-size: 1.1rem;
     }
 
@@ -640,10 +660,11 @@
     .landing-p h1{
       font-size: 2.3em;
       line-height: 50px;
+      
   
     }
     .header div p {
-      margin: 50px 0 ;
+      margin: 50px 20px ;
       width: 100%;
     }
   }
