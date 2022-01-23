@@ -7,6 +7,7 @@
     --text-white: #FFFFFF;
     --text-blue: #4D49FF;
     --text-purple: #8C30F5;
+    --transition: all 0.3s linear;
     
 }
 
@@ -28,6 +29,10 @@
     font-weight: 800;
     font-size: 72px;
     line-height: 98.35px;
+  }
+
+  h2 {
+    font-size: 54px;
   }
 
   /* toggle */
@@ -78,7 +83,7 @@
     background-image: url(./images/landing\ page.png);
     background-position: top;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
   }
   header {
@@ -86,7 +91,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 64px 74px;
-    
   }
   .logo {
     font-weight: 700;
@@ -170,6 +174,49 @@
     justify-content: center;
     text-align: center;
   }
+
+
+  /* section2  */
+  .section2 {
+    background-color: var(--button-background-dark-purple);
+    color: white;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .prev-btn, .next-btn {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 7%;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    color: white;
+    opacity: 0.2;
+   
+  }
+  .prev-btn {
+    left: 0;
+  }
+  .next-btn {
+    right: 0;
+  }
+  .prev-btn:hover,
+.next-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
 
 
   /* section3 */
@@ -533,6 +580,7 @@
     footer {
       padding: 48px 80px 38px;
     }
+
     
   }
 
