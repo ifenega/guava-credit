@@ -153,6 +153,16 @@
     
     
   }
+  .waitlist a {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .waitlist a:hover {
+    color: white;
+    background-color: var(--button-background-dark-purple);
+    border: 0;
+  }
 
   button {
     width: 280px;
@@ -250,6 +260,7 @@
     justify-content: center;
     color: var(--text-blue);
     margin-bottom: 75px;
+    text-align: center;
   }
   .section3 h5 {
     font-size: 52px;
