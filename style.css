@@ -343,14 +343,14 @@
   }
 
   .section4-innerdiv-img {
-    background: url(./images/image2.jpeg) #C0CCDA no-repeat center;
+    background: url(./images/Photo.png) #C0CCDA no-repeat center;
     background-size: cover;
     position: absolute;
     background-color: #C0CCDA;
     width: 536.04px;
     height: 500px;
-    top: -70px;
-    left: 795.5px;
+    top: -87px;
+    left: 718.5px;
     border-radius: 100%;
   }
   .section4-innerdiv-opacity-box{
