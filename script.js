@@ -1,63 +1,63 @@
-const sliderInfo = [
-    {
-        id : 0,
-        text: "Increase your Conversion rate +35%"
-    },
-    {
-        id : 1,
-        text: "Increase repeat purchases"
-    },
-    {
-        id : 2,
-        text: "Protect your working capital"
-    }
-]
 
-const textContainer = document.getElementById('text-container')
-const prevBtn = document.querySelector(".prev-btn")
-const nextBtn = document.querySelector(".next-btn")
+const navToggle = document.getElementById('nav-toggle');
+let navTransform = false;
 
-const toggle = document.querySelector('.toggle')
-const navigation = document.querySelector('.navigation')
-
-toggle.addEventListener('click', () => {
-    navigation.classList.toggle('active')
-    toggle.classList.toggle('active')
-    
-    
-})
-
-
-//slider
-//set starting item
-let currentItem = 0
-
-//load initial item 
-window.addEventListener("DOMContentLoaded", ()=> {
-    changeText(currentItem)
-})
-
-const changeText = () => {
-    const item = sliderInfo[currentItem]
-    textContainer.textContent = item.text
+//click event for mobile nav bar
+function toggleNavTransform() {
+    console.log('jam')
+    navTransform = !navTransform;
+    document.querySelector('.mobile-dropdown').classList.toggle('mobile-dropdown-active')
+    document.querySelectorAll('.nav-icon').forEach(icon => icon.classList.toggle('nav-icon-transformed'));
 }
+navToggle.addEventListener('click', toggleNavTransform)
 
-nextBtn.addEventListener('click', ()=>{
-    currentItem++
-    if(currentItem > sliderInfo.length-1) {
-        currentItem = 0
+
+
+// Accordion functionality for mobile
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    // Toggle the active class on the header
+    header.classList.toggle('active');
+
+    // Toggle the display of the accordion content
+    const accordionContent = header.nextElementSibling;
+    if (accordionContent.style.maxHeight) {
+      accordionContent.style.maxHeight = null;
+    } else {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
     }
-    changeText(currentItem)
-})
 
-prevBtn.addEventListener('click', ()=>{
-    currentItem--
-    if(currentItem < 0 ) {
-        currentItem = sliderInfo.length-1
+    // Toggle the accordion icon and direction
+    const accordionIcon = header.querySelector('.accordion-icon');
+    if (accordionIcon.classList.contains('closed')) {
+      accordionIcon.classList.remove('closed');
+      accordionIcon.classList.add('opened');
+    } else {
+      accordionIcon.classList.remove('opened');
+      accordionIcon.classList.add('closed');
     }
-    changeText(currentItem)
-})
+  });
+});
 
+// Disable accordion functionality for desktop
+const mediaQuery = window.matchMedia('(min-width: 1025px)');
+if (mediaQuery.matches) {
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    // Remove the click event listener from the header
+    header.removeEventListener('click', () => {});
+    
+    // Remove the active class from the header
+    header.classList.remove('active');
 
+    // Set the display of the accordion content to block
+    const accordionContent = header.nextElementSibling;
+    accordionContent.style.display = 'block';
 
-
+    // Remove the accordion icon
+    const accordionIcon = header.querySelector('.accordion-icon');
+    accordionIcon.style.display = 'none';
+  });
+}
