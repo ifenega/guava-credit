@@ -31,6 +31,18 @@ nav {
   z-index: 999;
 }
 
+.logo {
+  font-size: 24px;
+  text-decoration: none;
+  font-style: normal;
+  color: #4f46ba;
+}
+sup {
+  font-size: 10px;
+}
+.about .logo {
+  color: white;
+}
 /* nav items */
 /* desktop */
 @media only screen and (min-width: 1025px) {
@@ -706,7 +718,7 @@ footer {
 .value .header {
   color: white;
 }
-.value .title{
+.value .title {
   max-width: 800px;
 }
 
@@ -730,7 +742,7 @@ footer {
   display: flex;
   gap: 50px;
 }
-.value-item h5{
+.value-item h5 {
   font-size: 24px;
 }
 .value-item p {
@@ -740,5 +752,4 @@ footer {
   display: flex;
   flex-direction: column;
   max-width: 602px;
-
 }
