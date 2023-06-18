@@ -61,3 +61,24 @@ if (mediaQuery.matches) {
     accordionIcon.style.display = 'none';
   });
 }
+
+
+const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+// Intersection Observer to load images when they enter the viewport
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Set the 'src' attribute from the 'data-src' attribute
+      entry.target.src = entry.target.dataset.src;
+
+      // Unobserve the image after it's loaded
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+// Observe each lazy image
+lazyImages.forEach(image => {
+  imageObserver.observe(image);
+});
