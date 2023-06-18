@@ -67,6 +67,9 @@ sup {
   margin: 0 auto;
   padding: 20px 40px;
 }
+.layout-container h1 {
+  font-size: 14px;
+}
 nav .desktop {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -207,12 +210,12 @@ header .layout-container,
   .header-text h1,
   .our-process h1,
   .download h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: bold;
   }
   .our-process h3,
   .download h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 }
@@ -220,18 +223,18 @@ header .layout-container,
 @media screen and (min-width: 768px) {
   header,
   .our-process {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .header-text h1,
   .our-process h1,
   .download h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
   }
   .our-process h3,
   .download h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
   }
 }
@@ -629,6 +632,10 @@ footer {
 
 .team .board {
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .team {
   background-color: white;
@@ -684,6 +691,7 @@ footer {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .team-profile-img {
@@ -739,7 +747,8 @@ footer {
 }
 
 .value-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 50px;
 }
 .value-item h5 {
