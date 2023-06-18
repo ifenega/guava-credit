@@ -200,6 +200,10 @@ header .layout-container,
   display: flex;
   justify-content: center;
 }
+.side-img img {
+  width: 100%;
+  height: auto;
+}
 
 @media screen and (max-width: 768px) {
   header,
@@ -318,6 +322,7 @@ header .layout-container,
   grid-template-columns: auto 1fr;
   gap: 16px;
 }
+
 .steps-item h6 {
   font-weight: 700;
   margin-bottom: 2px;
@@ -328,7 +333,8 @@ header .layout-container,
   max-width: 400px;
 }
 
-@media (max-width: 1024px) {
+
+@media (max-width: 658px) {
   .steps {
     gap: 16px;
   }
@@ -750,6 +756,17 @@ footer {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 50px;
+}
+
+@media (max-width: 1024px) {
+  .value-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .value-item img {
+width: 100px;
+  }
 }
 .value-item h5 {
   font-size: 24px;
