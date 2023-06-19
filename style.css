@@ -703,7 +703,7 @@ footer {
 .team-profile-img {
   width: 300px;
   height: 354px;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 @media screen and (max-width: 1024px) {
   .team-profile-container {
@@ -778,4 +778,10 @@ width: 100px;
   display: flex;
   flex-direction: column;
   max-width: 602px;
+}
+
+.samson {
+  border-radius: 20px;
+  overflow: hidden;
+  object-fit: cover;
 }
