@@ -788,3 +788,8 @@ width: 100px;
   overflow: hidden;
   object-fit: cover;
 }
+
+.link-button a {
+  text-decoration: none;
+  color: inherit;
+}
