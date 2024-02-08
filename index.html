@@ -16,7 +16,10 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="stylesheet" href="./style.css">
 
-
+    <link
+    href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
     <title>Home</title>
 </head>
 
@@ -102,7 +105,7 @@
             </div>
 
             <div class="side-img">
-                <img data-src="./images/Images2/quickLoanIcon.png" role="decoration" loading="lazy" />
+                <img data-src="./images/Images2/quickLoanIcon.png" role="decoration" loading="lazy" width="80%" />
             </div>
         </div>
 
@@ -238,6 +241,14 @@
                     </ul>
                 </div>
                 <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                       
+                        <li><a href="./termsconditions.html">Terms & Condition</a></li>
+                        <li><button onclick="downloadPDF()" class="bg-transparent text-white "><span >Privacy Policy</span></button></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
                     <h4>Contact Us</h4>
                     <ul>
                         <li>
@@ -269,6 +280,16 @@
             <hr>
             <p class="copyright">2023 TarQ Technologies © Copyright All rights reserved</p>
         </div>
+
+        <script>
+            function downloadPDF() {
+              const pdfUrl = './TARQ TECHONOLOGIES LTD PRIVACY POLICY_240208_071446.pdf';
+              const link = document.createElement('a');
+              link.href = pdfUrl;
+              link.download = 'TARQ TECHONOLOGIES LTD PRIVACY POLICY.pdf';
+              link.click();
+            }
+          </script>
     </footer>
 
 

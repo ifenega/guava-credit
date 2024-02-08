@@ -110,6 +110,7 @@ nav .desktop {
   .get-a-loan,
   .get-started button {
     width: 100%;
+    padding: 20px
   }
 }
 .waitlist {
@@ -599,6 +600,9 @@ footer {
 .about .nav-icon {
   background-color: white;
 }
+.custom-color {
+  color: #4f46ba !important;
+}
 .about .nav-items a {
   color: white;
 }
@@ -792,4 +796,7 @@ width: 100px;
 .link-button a {
   text-decoration: none;
   color: inherit;
+}
+.special a {
+  color: "#4f46ba";
 }
